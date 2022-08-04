@@ -122,3 +122,24 @@ child.age = 27;
 
 // 5.6
 
+class Car {};
+
+
+// 5.7
+
+class Car {
+  // Change code below this line
+  constructor(brand, model, price) {
+this.brand = brand;
+  this.model = model;
+  this.price = price;
+
+  }
+  // Change code above this line
+}
+
+// 5.8
+
+
+
+
