@@ -222,14 +222,12 @@
 // builder.padBoth("=");
 // console.log(builder.getValue()); // "=^.^="
 
-
-
 // // 5.12
 
 // class Car {
 //   // Change code below this line
 // #brand
-  
+
 //   constructor({ brand, model, price }) {
 //     this.#brand = brand;
 //     this.model = model;
@@ -242,17 +240,16 @@
 // changeBrand(newBrand) {
 //   this.#brand = newBrand;
 // }
-  
+
 //   // Change code above this line
 // }
-
 
 // // 5.13
 
 // class Storage {
 //   // Change code below this line
 // #items
-  
+
 //   constructor(items) {
 //     this.#items = items;
 //   }
@@ -278,13 +275,12 @@
 // storage.removeItem("Prolonger");
 // console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Droid"]
 
-
 // // 5.14
 
 // class StringBuilder {
 //   // Change code below this line
-// #value 
-  
+// #value
+
 //   constructor(initialValue) {
 //     this.#value = initialValue;
 //   }
@@ -316,7 +312,6 @@
 // console.log(builder.getValue()); // "^.^"
 // builder.padBoth("=");
 // console.log(builder.getValue()); // "=^.^="
-
 
 // // 5.15
 // class Car {
@@ -357,41 +352,67 @@
 //   // Change code above this line
 // }
 
-
 // 5.16
 
-class Car {
-  // Change code below this line
-  #price;
+// class Car {
+//   // Change code below this line
+//   #price;
 
-  static MAX_PRICE = 50000;
-  
+//   static MAX_PRICE = 50000;
 
-  constructor({ price }) {
-    this.#price = price;
-  }
+//   constructor({ price }) {
+//     this.#price = price;
+//   }
 
-  get price() {
-    return this.#price;
-  }
+//   get price() {
+//     return this.#price;
+//   }
 
-  set price(newPrice) {
-    newPrice > Car.MAX_PRICE ? null : this.#price = newPrice;
+//   set price(newPrice) {
+//     newPrice > Car.MAX_PRICE ? null : this.#price = newPrice;
 
-  //   if (newPrice > Car.MAX_PRICE) {
-  //     return;
-  //   }
-  //   this.#price = newPrice;
-  }
+//   //   if (newPrice > Car.MAX_PRICE) {
+//   //     return;
+//   //   }
+//   //   this.#price = newPrice;
+//   }
 
-  // Change code above this line
-}
+//   // Change code above this line
+// }
 
-const audi = new Car({ price: 35000 });
-console.log(audi.price); // 35000
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
 
-audi.price = 49000;
-console.log(audi.price); // 49000
+// audi.price = 49000;
+// console.log(audi.price); // 49000
 
-audi.price = 51000;
-console.log(audi.price); // 49000
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+// 5.17
+
+// class Car {
+//   static #MAX_PRICE = 50000;
+//   // Change code below this line
+
+//   static checkPrice(price) {
+//     if (price > Car.#MAX_PRICE) {
+//       return "Error! Price exceeds the maximum";
+//     }
+//     return "Success! Price is within acceptable limits";
+//   }
+
+//   // Change code above this line
+//   constructor({ price }) {
+//     this.price = price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+
+// 5.18
